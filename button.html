@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sean Costume</title>
+  <link href="/style.css" rel="stylesheet" />
+</head>
+
+<body style="justify-content: center; align-items: center; height: 100vh;">
+  <h1>I'm a Rick Roll!!!</h1>
+
+  <script type="module">
+    fetch('https://api.npoint.io/307c922c070913b2bebb', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({value: true})
+    })
+    .catch(err => console.log);
+  </script>
+</body>
+
+</html>
