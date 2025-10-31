@@ -1,3 +1,16 @@
+// Register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('ServiceWorker registered:', registration.scope);
+      })
+      .catch((error) => {
+        console.log('ServiceWorker registration failed:', error);
+      });
+  });
+}
+
 let pollTimeout = null;
 let resetDataTimer = null;
 const API_ENDPOINT = 'https://api.npoint.io/307c922c070913b2bebb'; // Replace with your actual API endpoint
