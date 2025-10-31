@@ -39,7 +39,11 @@ async function resetTimer() {
     body: JSON.stringify({value: false})
   })
   .catch(err => console.log)
-  .finally(() => hideVideo());
+  .finally(() => {
+    hideVideo();
+    clearTimeout(resetDataTimer);
+    resetDataTimer = null;
+  });
 }
 
 function showVideo() {
