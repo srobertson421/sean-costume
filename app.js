@@ -32,7 +32,7 @@ async function pollData(url, intervalMs = 3000) {
     console.log("Fetched data:", data);
 
     if(!resetDataTimer && data.value) {
-      resetDataTimer = setTimeout(() => resetTimer(), 15000);
+      resetDataTimer = setTimeout(() => resetTimer(), 45000);
       showVideo();
     }
 
